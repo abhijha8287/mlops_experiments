@@ -28,10 +28,11 @@ x_train, x_test, y_train, y_test = train_test_split(
 )
 
 # Model params
-max_depth = 8
-n_estimators = 5
+max_depth = 90
+n_estimators = 70
 
 mlflow.set_experiment("mlops_experiments")
+mlflow.autolog()
 
 with mlflow.start_run():
     clf = RandomForestClassifier(
